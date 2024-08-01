@@ -2,7 +2,7 @@ import joblib
 import streamlit as st
 from datetime import date
 
-model = joblib.load('model.pkl')
+model = joblib.load('water_quality_model.pkl')
 
 
 st.set_page_config(
