@@ -2,14 +2,11 @@ numpy
 pandas 
 seaborn 
 matplotlib   
-sklearn   
+scikit-learn 
 gunicorn 
-flask  
 joblib 
 catboost  
 xgboost 
 datetime  
-imblearn
-lightgbm
 scipy
 streamlit
