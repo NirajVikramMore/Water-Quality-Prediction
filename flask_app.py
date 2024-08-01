@@ -1,43 +1,25 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from flask import Flask, render_template, request
 import joblib
 from datetime import date
 
-
-# In[2]:
 
 
 model = joblib.load('model.pkl')
 model
 
 
-# In[3]:
-
-
 app = Flask(__name__)
 
-
-# In[4]:
 
 
 year = date.today().year
 year
 
 
-# In[5]:
-
-
 @app.route("/")
 def home():
     return render_template('home.html',current_year=year)
 
-
-# In[6]:
 
 
 @app.route("/predict", methods=["GET","POST"])
@@ -72,8 +54,6 @@ def predict():
         else:
             return render_template('home.html',current_year=year,prediction_text="The water with specified details is impure, contaminated and non-potable. It may not be suitable for domestic consumption.")
 
-
-# In[ ]:
 
 
 if __name__ == "__main__":
